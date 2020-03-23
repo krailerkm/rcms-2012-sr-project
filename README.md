@@ -63,6 +63,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## License
-[The Unlicense](https://unlicense.org), [Highsoft](https://shop.highsoft.com/media/highsoft/Standard-License-Agreement-12.0.pdf), [CC-BY-2.5](http://symisun.com/templates/free/01/)
+[Unlicense](https://unlicense.org)
 
 ## Credit
+Thanks to the code for displaying graphs [Highsoft](https://shop.highsoft.com/media/highsoft/Standard-License-Agreement-12.0.pdf) and free website designs [Symisun](http://symisun.com/templates/free/01/) that I have used for my senior project.Thank you so much for making me today!!
