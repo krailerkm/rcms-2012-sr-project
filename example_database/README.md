@@ -1,4 +1,4 @@
-# DATA EXAMPLE DATAS & TABLES
+# Example datas & tables
 
 ## How to Import by phpmyADMIN
 
