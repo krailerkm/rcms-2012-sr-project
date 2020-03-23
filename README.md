@@ -29,6 +29,24 @@ php5-mysql
 php5-snmp
 ```
 
+Import database and table from example database file choice one type of file.
+
+```
+1 Log into phpMyAdmin.
+2 Select the destination database on the left pane.
+3 Click on the Import tab in the top center pane.
+4 Under the 'File to import' section, click Browse and locate the file with the .sql to import.
+5 Check or uncheck the boxes for 'Partial import' and 'Other options'.
+6 From the 'Format' dropdown menu choose 'SQL'.
+7 Click the Go button at the bottom to import the database.
+```
+
+Import software from this Gidhub to Apache service parth.
+
+```bash
+scp /www/* user@192.168.0.1:/var/www/html
+```
+
 ## Usage
 
 ```python
