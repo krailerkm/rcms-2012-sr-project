@@ -26,13 +26,6 @@ yum -y install httpd
 
 ```bash
 yum -y install mysql-server
-## ...
-/etc/rc.d/init.d/mysqld start
-## ...
-chkconfig mysqld on
-mysql_secure_installation
-## ...
-## Answaer Y all question! and set root password!
 ```
 
 
