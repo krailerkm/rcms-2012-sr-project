@@ -1,6 +1,6 @@
 # DATA EXAMPLE DATAS & TABLES
 
-## HOW TO IMPORT by PHPADMIN
+## How to Import by phpmyADMIN
 
 Import database and table from example database file choice one type of file.
 
