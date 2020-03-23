@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 3.3.10deb1
+- http://www.phpmyadmin.net
+-
+- Host: localhost
+- Generation Time: Mar 11, 2012 at 01:41 PM
+- Server version: 5.1.54
+- PHP Version: 5.3.5-1ubuntu7.4
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="db_rcms" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="db_cpu_temp">
+                CREATE TABLE `db_cpu_temp` (
+                  `UserID` int(4) unsigned zerofill NOT NULL AUTO_INCREMENT,
+                  `IpDev` varchar(15) NOT NULL,
+                  `num` int(1) NOT NULL,
+                  `ut` int(3) NOT NULL,
+                  PRIMARY KEY (`UserID`,`IpDev`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="db_device">
+                CREATE TABLE `db_device` (
+                  `UserID` int(4) unsigned zerofill NOT NULL,
+                  `IpDev` varchar(15) NOT NULL,
+                  `ReadCom` varchar(20) NOT NULL,
+                  `WriteCom` varchar(20) NOT NULL,
+                  `SnmpVer` enum('1','2c','3') NOT NULL DEFAULT '2c',
+                  `Web` varchar(50) DEFAULT NULL,
+                  `TypeDev` varchar(50) DEFAULT NULL,
+                  `Userssh` varchar(20) NOT NULL,
+                  `Passssh` varchar(20) NOT NULL,
+                  `Status` varchar(1) NOT NULL,
+                  PRIMARY KEY (`UserID`,`IpDev`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="db_user">
+                CREATE TABLE `db_user` (
+                  `UserID` int(4) unsigned zerofill NOT NULL AUTO_INCREMENT,
+                  `Username` varchar(20) NOT NULL,
+                  `Password` varchar(20) NOT NULL,
+                  `Status` enum('ADMIN','USER') NOT NULL DEFAULT 'USER',
+                  PRIMARY KEY (`UserID`),
+                  UNIQUE KEY `Username` (`Username`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="db_userdata">
+                CREATE TABLE `db_userdata` (
+                  `UserID` int(4) unsigned zerofill NOT NULL AUTO_INCREMENT,
+                  `Name` varchar(100) DEFAULT NULL,
+                  `Email` varchar(100) NOT NULL,
+                  `Phone` varchar(20) NOT NULL,
+                  `Mobile` varchar(20) NOT NULL,
+                  `Department` varchar(200) DEFAULT NULL,
+                  `Description` varchar(200) DEFAULT NULL,
+                  PRIMARY KEY (`UserID`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="db_userupdate">
+                CREATE TABLE `db_userupdate` (
+                  `UserID` int(4) unsigned zerofill NOT NULL,
+                  `IpDevice` varchar(20) NOT NULL,
+                  `Date` date NOT NULL,
+                  `Time` time NOT NULL,
+                  `Data_update` varchar(300) NOT NULL,
+                  PRIMARY KEY (`UserID`,`IpDevice`,`Date`,`Time`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'db_rcms'
+    -->
+    <database name="db_rcms">
+        <!-- Table db_cpu_temp -->
+        <table name="db_cpu_temp">
+            <column name="UserID">0001</column>
+            <column name="IpDev">192.168.33.129</column>
+            <column name="num">1</column>
+            <column name="ut">4</column>
+        </table>
+        <!-- Table db_device -->
+        <table name="db_device">
+            <column name="UserID">0002</column>
+            <column name="IpDev">s</column>
+            <column name="ReadCom"></column>
+            <column name="WriteCom"></column>
+            <column name="SnmpVer">1</column>
+            <column name="Web"></column>
+            <column name="TypeDev">Router</column>
+            <column name="Userssh"></column>
+            <column name="Passssh"></column>
+            <column name="Status">F</column>
+        </table>
+        <table name="db_device">
+            <column name="UserID">0002</column>
+            <column name="IpDev">a</column>
+            <column name="ReadCom">a</column>
+            <column name="WriteCom">a</column>
+            <column name="SnmpVer">1</column>
+            <column name="Web">a</column>
+            <column name="TypeDev">Router</column>
+            <column name="Userssh"></column>
+            <column name="Passssh"></column>
+            <column name="Status">F</column>
+        </table>
+        <table name="db_device">
+            <column name="UserID">0001</column>
+            <column name="IpDev">192.168.33.129</column>
+            <column name="ReadCom">public</column>
+            <column name="WriteCom">private</column>
+            <column name="SnmpVer">2c</column>
+            <column name="Web">http://www.1q2w3e4r.com</column>
+            <column name="TypeDev">Router</column>
+            <column name="Userssh">admin</column>
+            <column name="Passssh">1234</column>
+            <column name="Status">T</column>
+        </table>
+        <table name="db_device">
+            <column name="UserID">0001</column>
+            <column name="IpDev">192.168.33.130</column>
+            <column name="ReadCom">F</column>
+            <column name="WriteCom">a</column>
+            <column name="SnmpVer">1</column>
+            <column name="Web">192.168.33.130</column>
+            <column name="TypeDev">Switch</column>
+            <column name="Userssh">a</column>
+            <column name="Passssh">a</column>
+            <column name="Status">F</column>
+        </table>
+        <table name="db_device">
+            <column name="UserID">0001</column>
+            <column name="IpDev">192.168.33.222</column>
+            <column name="ReadCom">F</column>
+            <column name="WriteCom">a</column>
+            <column name="SnmpVer">1</column>
+            <column name="Web">192.168.33.222</column>
+            <column name="TypeDev">Switch</column>
+            <column name="Userssh"></column>
+            <column name="Passssh"></column>
+            <column name="Status">F</column>
+        </table>
+        <table name="db_device">
+            <column name="UserID">0002</column>
+            <column name="IpDev">192.168.33.129</column>
+            <column name="ReadCom">public</column>
+            <column name="WriteCom">private</column>
+            <column name="SnmpVer">2c</column>
+            <column name="Web"></column>
+            <column name="TypeDev">Router</column>
+            <column name="Userssh">admin</column>
+            <column name="Passssh">1234</column>
+            <column name="Status">T</column>
+        </table>
+        <!-- Table db_user -->
+        <table name="db_user">
+            <column name="UserID">0001</column>
+            <column name="Username">admin</column>
+            <column name="Password">admin</column>
+            <column name="Status">ADMIN</column>
+        </table>
+        <table name="db_user">
+            <column name="UserID">0002</column>
+            <column name="Username">user</column>
+            <column name="Password">user</column>
+            <column name="Status">USER</column>
+        </table>
+        <table name="db_user">
+            <column name="UserID">0004</column>
+            <column name="Username">a</column>
+            <column name="Password">a</column>
+            <column name="Status">USER</column>
+        </table>
+        <table name="db_user">
+            <column name="UserID">0003</column>
+            <column name="Username">test</column>
+            <column name="Password">test</column>
+            <column name="Status">USER</column>
+        </table>
+        <!-- Table db_userdata -->
+        <table name="db_userdata">
+            <column name="UserID">0001</column>
+            <column name="Name">ADMIN TEST</column>
+            <column name="Email">admin@test.com</column>
+            <column name="Phone">081-1111111</column>
+            <column name="Mobile">034-444444</column>
+            <column name="Department">Department of Engineering</column>
+            <column name="Description">Admin user test</column>
+        </table>
+        <table name="db_userdata">
+            <column name="UserID">0002</column>
+            <column name="Name">USER TEST</column>
+            <column name="Email">user@test.com</column>
+            <column name="Phone">082-2222222</column>
+            <column name="Mobile">032-444444</column>
+            <column name="Department">Department of Engineering</column>
+            <column name="Description">User user test</column>
+        </table>
+        <table name="db_userdata">
+            <column name="UserID">0003</column>
+            <column name="Name">test</column>
+            <column name="Email"></column>
+            <column name="Phone"></column>
+            <column name="Mobile"></column>
+            <column name="Department"></column>
+            <column name="Description"></column>
+        </table>
+        <table name="db_userdata">
+            <column name="UserID">0004</column>
+            <column name="Name">a</column>
+            <column name="Email">a</column>
+            <column name="Phone">a</column>
+            <column name="Mobile">a</column>
+            <column name="Department">a</column>
+            <column name="Description">a</column>
+        </table>
+        <!-- Table db_userupdate -->
+        <table name="db_userupdate">
+            <column name="UserID">0001</column>
+            <column name="IpDevice">192.168.33.129</column>
+            <column name="Date">2012-01-22</column>
+            <column name="Time">01:42:06</column>
+            <column name="Data_update">contact : aaaa</column>
+        </table>
+        <table name="db_userupdate">
+            <column name="UserID">0001</column>
+            <column name="IpDevice">192.168.33.129</column>
+            <column name="Date">2012-01-22</column>
+            <column name="Time">02:15:55</column>
+            <column name="Data_update">hostname : C</column>
+        </table>
+        <table name="db_userupdate">
+            <column name="UserID">0001</column>
+            <column name="IpDevice">192.168.33.129</column>
+            <column name="Date">2012-01-22</column>
+            <column name="Time">01:48:48</column>
+            <column name="Data_update">ifstatus 1 : 2</column>
+        </table>
+        <table name="db_userupdate">
+            <column name="UserID">0001</column>
+            <column name="IpDevice">192.168.33.129</column>
+            <column name="Date">2012-01-22</column>
+            <column name="Time">01:50:24</column>
+            <column name="Data_update">hostname : A</column>
+        </table>
+        <table name="db_userupdate">
+            <column name="UserID">0001</column>
+            <column name="IpDevice">192.168.33.129</column>
+            <column name="Date">2012-01-22</column>
+            <column name="Time">21:33:08</column>
+            <column name="Data_update">hostname : AAA</column>
+        </table>
+        <table name="db_userupdate">
+            <column name="UserID">0001</column>
+            <column name="IpDevice">192.168.33.129</column>
+            <column name="Date">2012-01-22</column>
+            <column name="Time">21:33:10</column>
+            <column name="Data_update">hostname : AAA</column>
+        </table>
+        <table name="db_userupdate">
+            <column name="UserID">0001</column>
+            <column name="IpDevice">192.168.33.129</column>
+            <column name="Date">2012-02-01</column>
+            <column name="Time">17:50:46</column>
+            <column name="Data_update">contact : Thailand</column>
+        </table>
+        <table name="db_userupdate">
+            <column name="UserID">0001</column>
+            <column name="IpDevice">192.168.33.129</column>
+            <column name="Date">2012-02-05</column>
+            <column name="Time">11:00:59</column>
+            <column name="Data_update">ifstatus 1 : 2</column>
+        </table>
+        <table name="db_userupdate">
+            <column name="UserID">0001</column>
+            <column name="IpDevice">192.168.33.129</column>
+            <column name="Date">2012-02-05</column>
+            <column name="Time">11:00:51</column>
+            <column name="Data_update">ifstatus 1 : 1</column>
+        </table>
+        <table name="db_userupdate">
+            <column name="UserID">0001</column>
+            <column name="IpDevice">192.168.33.129</column>
+            <column name="Date">2012-02-05</column>
+            <column name="Time">12:05:44</column>
+            <column name="Data_update">ifstatus 1 : 1</column>
+        </table>
+        <table name="db_userupdate">
+            <column name="UserID">0001</column>
+            <column name="IpDevice">192.168.33.129</column>
+            <column name="Date">2012-02-05</column>
+            <column name="Time">12:05:49</column>
+            <column name="Data_update">ifstatus 1 : 2</column>
+        </table>
+        <table name="db_userupdate">
+            <column name="UserID">0001</column>
+            <column name="IpDevice">192.168.33.129</column>
+            <column name="Date">2012-02-05</column>
+            <column name="Time">13:21:01</column>
+            <column name="Data_update">contact : A</column>
+        </table>
+        <table name="db_userupdate">
+            <column name="UserID">0001</column>
+            <column name="IpDevice">192.168.33.129</column>
+            <column name="Date">2012-02-06</column>
+            <column name="Time">06:16:57</column>
+            <column name="Data_update">hostname : aaaa</column>
+        </table>
+        <table name="db_userupdate">
+            <column name="UserID">0001</column>
+            <column name="IpDevice">192.168.33.129</column>
+            <column name="Date">2012-02-13</column>
+            <column name="Time">00:19:01</column>
+            <column name="Data_update">hostname : AAAA</column>
+        </table>
+        <table name="db_userupdate">
+            <column name="UserID">0001</column>
+            <column name="IpDevice">192.168.33.129</column>
+            <column name="Date">2012-03-11</column>
+            <column name="Time">13:15:15</column>
+            <column name="Data_update">ifstatus 3 : 2</column>
+        </table>
+        <table name="db_userupdate">
+            <column name="UserID">0001</column>
+            <column name="IpDevice">192.168.33.129</column>
+            <column name="Date">2012-03-11</column>
+            <column name="Time">13:18:07</column>
+            <column name="Data_update">ifstatus 3 : 1</column>
+        </table>
+    </database>
+</pma_xml_export>
