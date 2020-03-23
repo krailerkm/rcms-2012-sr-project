@@ -8,10 +8,13 @@ This software was part of Sr. Project when I was at university. Thank you to all
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Use Yellow dog Updater, Modified (Yum) is the default package manager used in CentOS6 [YUM](https://wiki.centos.org/PackageManagement/Yum) to install foobar.
+
+1. Install Net-SNMP
 
 ```bash
-pip install foobar
+yum -y install net-snmp net-snmp-utils 
+
 ```
 
 ## Usage
