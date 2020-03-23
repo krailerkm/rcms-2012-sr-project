@@ -1,5 +1,7 @@
 # Example datas & tables
 
+For ease in creating a database and accessing data, for example, import all of the following data. Choose only 1 type.
+
 ## How to Import by phpmyADMIN
 
 Import database and table from example database file choice one type of file.
