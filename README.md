@@ -10,25 +10,24 @@ This software was part of Sr. Project when I was at university. Thank you to all
 
 Use Yellow dog Updater, Modified (Yum) is the default package manager used in CentOS6 [YUM](https://wiki.centos.org/PackageManagement/Yum) to install foobar.
 
-1. Install Net-SNMP
+Pre-Software Request
 
-```bash
-yum -y install net-snmp net-snmp-utils 
+```
+Net-SNMP
+Apache 2.2
+MySQL 5.1
+PHP5
+phpMyAdmin
+OpenSSH
 ```
 
-2. Install Apache 2.2
+PHP Module Request
 
-```bash
-yum -y install httpd
 ```
-
-3. Install MySQL 5.1
-
-```bash
-yum -y install mysql-server
+libssh2
+php5-mysql
+php5-snmp
 ```
-
-
 
 ## Usage
 
