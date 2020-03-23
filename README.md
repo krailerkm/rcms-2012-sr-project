@@ -63,6 +63,6 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## License
-[Unlicense](https://unlicense.org)
+[The Unlicense](https://unlicense.org), [Highsoft](https://shop.highsoft.com/media/highsoft/Standard-License-Agreement-12.0.pdf), [CC-BY-2.5](http://symisun.com/templates/free/01/)
 
 ## Credit
