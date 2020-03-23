@@ -14,8 +14,29 @@ Use Yellow dog Updater, Modified (Yum) is the default package manager used in Ce
 
 ```bash
 yum -y install net-snmp net-snmp-utils 
-
 ```
+
+2. Install Apache 2.2
+
+```bash
+yum -y install httpd
+```
+
+3. Install MySQL 5.1
+
+```bash
+yum -y install mysql-server
+...
+/etc/rc.d/init.d/mysqld start
+...
+chkconfig mysqld on
+
+mysql_secure_installation
+...
+## Answaer Y all question! and set root password!
+```
+
+
 
 ## Usage
 
