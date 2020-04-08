@@ -1,3 +1,5 @@
+![](images/rcms_logo_os_sm.png)
+
 # RCMS v2012
 
 Abstract. Because the network is currently being expanded. Thus the replacement or additional new device into the network. Give The administrator must have the burden of the increasing number of devices. So the idea is to develop RCMS (Router Configuration and Monitoring System), For administrators to manage device. Monitoring and set to work quick and easy. And Router Configuration and Monitoring System is a web application developed using the techniques AJAX (Asynchronous JavaScript and XML). Integrated with the protocol, SNMP (Simple Network Management Protocol)  and SSH (Secure Shell), And database systems to help the system administrator. Example : user can add devices router to your account. and can be view the status and configure the device. Using protocol SNMP. And SSH for command in the User EXEC.
